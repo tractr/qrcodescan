@@ -25,7 +25,16 @@ export default {
 				globDirectory: './public',
 				clientsClaim: true,
 				skipWaiting: true,
-				runtimeCaching: [],
+				runtimeCaching: [
+					{
+						urlPattern: /\.*/,
+						handler: 'CacheFirst',
+						options: {
+							cacheName: 'pages',
+							cacheableResponse: { statuses: [200] },
+						},
+					},
+				],
 			}),
 		sizes(),
 	],
