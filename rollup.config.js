@@ -25,16 +25,7 @@ export default {
 				globDirectory: './public',
 				clientsClaim: true,
 				skipWaiting: true,
-				runtimeCaching: [
-					{
-						urlPattern: isProd ? /https:\/\/qrcodescan.in\// : /http:\/\/localhost:5000\//,
-						handler: 'CacheFirst',
-						options: {
-							cacheName: 'pages',
-							cacheableResponse: { statuses: [200] },
-						},
-					},
-				],
+				runtimeCaching: [],
 			}),
 		sizes(),
 	],
