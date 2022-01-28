@@ -8,4 +8,3 @@ RUN npm run build
 # Create server
 FROM nginx:1.16-alpine
 COPY --from=builder /app/public /usr/share/nginx/html
-
